@@ -3,6 +3,8 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:project/LandingPage/landingPage.dart';
 import 'package:project/LoginPage/loginPage.dart';
 import 'package:project/intoPage/IntoPage.dart';
+import 'package:project/provider/userProvider.dart';
+import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class loadingpage extends StatefulWidget {
@@ -28,6 +30,8 @@ class _loadingpageState extends State<loadingpage>
   String? phone;
   String? id;
   String? name;
+  // Consumer<UsersProvider>? userprovider;
+  UsersProvider usersProvider = UsersProvider();
 
   @override
   void initState() {
@@ -50,13 +54,14 @@ class _loadingpageState extends State<loadingpage>
       phone = preferences.getString('phone');
       name = preferences.getString('name');
       id = preferences.getString('id');
+
+
       print(username);
       print(intostatus);
+      print(email);
       print(phone);
       print(name);
       print(id);
-
-      print(intostatus);
       if (intostatus == null) {
         Navigator.pushAndRemoveUntil(
           context,
@@ -82,7 +87,9 @@ class _loadingpageState extends State<loadingpage>
           (route) => false,
         );
       } else {
-        if (username == null) {
+        print('check username');
+        print(email);
+        if (email == null) {
           Navigator.pushAndRemoveUntil(
             context,
             PageRouteBuilder(
@@ -154,7 +161,7 @@ class _loadingpageState extends State<loadingpage>
                       child: Text(
                         'Loading . . .',
                         style: GoogleFonts.oswald(
-                            fontSize: 50, color: Colors.white),
+                            fontSize: 20, color: Colors.white),
                       ))),
             ],
           ),

@@ -31,6 +31,7 @@ class _LoginPageState extends State<LoginPage> {
     };
     var data = await post(context, 'login.php', params).then((data) async {
       print(data);
+      print('jawdiowajdioajwiodj');
       if (data == null) {
         dialog(context, 'ชื่อผู้ใช้หรือรหัสผ่านไม่ถูกต้อง');
       } else {
@@ -239,7 +240,7 @@ class _LoginPageState extends State<LoginPage> {
                           child: Text('ลืมรหัสผ่าน ?',
                               style: GoogleFonts.prompt(
                                   fontWeight: FontWeight.bold,
-                                  color: Color.fromARGB(255, 255, 0, 0),
+                                  color: Colors.white,
                                   fontSize: 15)))
                     ],
                   ),

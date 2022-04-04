@@ -91,7 +91,8 @@ class _IntoPageState extends State<IntoPage> {
                       ElevatedButton(
                           onPressed: () async {
                             SharedPreferences preferences = await SharedPreferences.getInstance();
-                            // preferences.setString('intostatus', 'pass');
+                            preferences.setString('intostatus', 'pass');
+                            
                             Navigator.pushAndRemoveUntil(
                                 context,
                                 MaterialPageRoute(
