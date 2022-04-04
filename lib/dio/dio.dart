@@ -20,7 +20,7 @@ Future<dynamic> get(BuildContext context, String api, dynamic params) async {
     var result = json.decode(response.data);
     return result;
   } else {
-    dialog(context, response.data);
+    // dialog(context, response.data);
     return null;
   }
 }

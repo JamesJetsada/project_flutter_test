@@ -40,7 +40,7 @@ class _LoginPageState extends State<LoginPage> {
         }
         print(loginmodel?.name);
         print(loginmodel?.phone);
-        dialog(context, 'เข้าได้');
+        // dialog(context, 'เข้าได้');
         SharedPreferences preferences = await SharedPreferences.getInstance();
         preferences.setString('name', loginmodel!.name.toString());
         preferences.setString('phone', loginmodel!.phone.toString());
