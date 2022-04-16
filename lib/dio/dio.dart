@@ -2,7 +2,6 @@ import 'dart:convert';
 
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
-import 'package:project/dialog/dialog.dart';
 import 'package:project/mydomain/Mydomain.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 

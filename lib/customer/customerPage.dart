@@ -163,7 +163,7 @@ class _customerPageState extends State<customerPage> {
                                                   border: Border.all(width: 1),
                                                 ),
                                                 child: Icon(
-                                                  Icons.person,
+                                                   Icons.person,
                                                   size: 55,
                                                 )),
                                             SizedBox(
